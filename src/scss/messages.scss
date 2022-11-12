@@ -1,0 +1,42 @@
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+.messages {
+  background-color: #ddddf7;
+  padding: 10px;
+  height: calc(100% - 160px);
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  // background: linear-gradient(transparent, #a99bdf);
+  // background-color: #6d3dde;
+  background-color: #ddddf7;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #a99bdf);
+  background-color: #6d3dde;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-corner {
+  //   background: linear-gradient(transparent, #a99bdf);
+  //   background-color: #6d3dde;
+  background-color: #ddddf7;
+}

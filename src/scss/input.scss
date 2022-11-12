@@ -1,0 +1,53 @@
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+.input {
+  height: 50px;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #2f2d52;
+    font-size: 18px;
+    &::placeholder {
+      color: rgb(162, 159, 159);
+    }
+  }
+  .send {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      height: 24px;
+      cursor: pointer;
+    }
+    button {
+      border: none;
+      color: #7192ff;
+      cursor: pointer;
+      background-color: white;
+      font-size: 1.5rem;
+    }
+    button:hover {
+      color: #3967ff;
+    }
+  }
+}

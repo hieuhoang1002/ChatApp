@@ -1,0 +1,78 @@
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+.chat {
+  flex: 2;
+  .chatInfo {
+    height: 50px;
+    background-color: #5d5b8d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    span {
+      font-size: 20px;
+      font-weight: 600;
+      color: rgb(233, 123, 14);
+    }
+    .chatIcons {
+      gap: 1rem;
+      display: flex;
+
+      .icon {
+        cursor: pointer;
+        color: lightgray;
+        width: 30px;
+        height: 30px;
+        // line-height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .call,
+        .add,
+        .more {
+          position: absolute;
+          margin-bottom: 5.5rem;
+          .content {
+            width: 100px;
+            height: 30px;
+            background-color: #2f2f2f;
+            text-align: center;
+            line-height: 30px;
+            font-size: 13px;
+            color: #d0d0d0;
+            font-weight: 500;
+            border-radius: 10px;
+          }
+          .taohinhtamgiac {
+            width: 0px;
+            height: 0px;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #2f2f2f;
+            margin-left: 2.5rem;
+          }
+        }
+      }
+      .icon:hover {
+        color: white;
+        background-color: rgba(146, 143, 143, 0.499);
+        border-radius: 50%;
+      }
+    }
+  }
+}
